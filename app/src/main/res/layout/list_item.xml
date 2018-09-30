@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.exa.d2.data.db.entity.TrainEntity" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/list_item_linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/list_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:text="@{data.name}"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            tools:text="路線名"/>
+
+        <TextView
+            android:id="@+id/list_item_company"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:text="@{data.company}"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            tools:text="鉄道会社" />
+
+        <TextView
+            android:id="@+id/list_item_source"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:text="@{data.source}"
+            android:textColor="@android:color/tertiary_text_dark"
+            android:textSize="12sp"
+            tools:text="情報ソース" />
+    </LinearLayout>
+</layout>
